@@ -1,12 +1,9 @@
 ---
-title: Practical Machine Learning Project Report
+title: "Practical Machine Learning Project Report"
 author: "Joao Correia"
-output:
-  html_document:
+date: "June 16, 2015"
+output: html_document
 ---
-
-Practical Machine Learning Project Report
-========================================================
 
 ## Background
 
@@ -36,7 +33,7 @@ The goal is to predict the manner in which they did the exercise. This is the "c
 
 ## Load libraries
 
-```{r message=FALSE}
+```{r message=FALSE, warning=FALSE}
 library("caret")
 library("rpart")
 library("rpart.plot")
@@ -64,7 +61,7 @@ dim(testing)
 
 Clean both the test and training datasets.
 
-```{r, message=FALSE}
+```{r, message=FALSE, fig.width=8, fig.height=8}
 # Remove classe from training and problem_id from testing
 classe<-training$classe
 training$classe<-NULL
